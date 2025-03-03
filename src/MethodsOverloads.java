@@ -9,6 +9,6 @@ public class MethodsOverloads {
     }
 
     public static double convertToCentimeters(int heightInFeet, int remainingHeightInInches) {
-        return heightInFeet * 12 + remainingHeightInInches;
+        return (heightInFeet * 12 + remainingHeightInInches) * 2.54;
     }
 }
