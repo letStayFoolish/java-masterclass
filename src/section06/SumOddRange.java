@@ -1,3 +1,5 @@
+package section06;
+
 public class SumOddRange {
     // write code here
     public static void main(String[] args) {

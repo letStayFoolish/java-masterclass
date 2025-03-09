@@ -1,3 +1,5 @@
+package section06;
+
 public class NumberOfDaysInMonth {
     /**
      * Computing Month Length With Leap Year Consideration

@@ -1,3 +1,5 @@
+package section06;
+
 public class IdentifyingPalindromic {
     public static void main(String[] args) {
         System.out.println(isPalindrome(121));
