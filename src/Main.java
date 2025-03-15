@@ -34,16 +34,41 @@ public class Main {
     public static String getInputFromScanner(int currentYear){
         Scanner scanner = new Scanner(System.in); // allows us to type input in console and returns back to the program
 
-        // String name = System.console().readLine("Hi what is your name? ");
+
+
+        // Validation
         System.out.println("Hi what is your name?");
         String name = scanner.nextLine();
-
         System.out.println("Hi " + name + " Thanks for taking the course!");
-        // String dateOfBirth = System.console().readLine("What is your birth year? ");
-        System.out.println("What is your birth year?");
-        String dateOfBirth = scanner.nextLine();
-        int age = currentYear - Integer.parseInt(dateOfBirth);
+
+        System.out.println("What is your birth year? ");
+        boolean isValid = false;
+        int age = 0;
+
+        do {
+            System.out.println("Enter a year of birth >= " + (currentYear - 125) + " and <= " + (currentYear) + ":");
+
+            try {
+                age = checkData(currentYear, scanner.nextLine());
+                isValid = age > 0;
+            } catch (NumberFormatException badUserData) {
+                System.out.println("Characters are not allowed! Try again.");
+                System.out.println(badUserData);
+            }
+
+        } while (!isValid);
 
         return "So, you are " + age + " years old.";
+    }
+
+    public static int checkData(int currentYear, String dateOfBirth) {
+        int dob = Integer.parseInt(dateOfBirth);
+        int minimumYear = currentYear - 125;
+
+        if((dob < minimumYear) || (dob > currentYear)) {
+            return -1;
+        }
+
+        return (currentYear - dob);
     }
 }
