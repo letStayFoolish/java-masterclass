@@ -1,9 +1,37 @@
+import secion07.Car;
+import secion07.SimpleCalculator;
+
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+    // public - means that any other class in any package can access this class.
+    // if it is null (omitted) - package access / the class is accessible only to classes in the same package.
     public static void main(String[] args) {
+        Car car = new Car();
+        car.describeCar();
+        System.out.println("Make: " + car.getMake());
+
+        System.out.println("Model: " + car.getModel());
+        System.out.println("Color: " + car.getColor ());
+        car.setMake("Honda");
+        car.setMake("Audi");
+
+        System.out.println("Make: " + car.getMake());
+
+        SimpleCalculator calculator = new SimpleCalculator();
+
+        calculator.setFirstNumber(5.0);
+        calculator.setSecondNumber(4);
+        System.out.println("add= " + calculator.getAdditionResult());
+        System.out.println("subtract= " + calculator.getSubtractionResult());
+
+        calculator.setFirstNumber(5.25);
+        calculator.setSecondNumber(0);
+        System.out.println("multiply= " + calculator.getMultiplicationResult());
+        System.out.println("divide= " + calculator.getDivisionResult());
+
 //        int myAge = 35;
 //        String yourAge = "33";
 //
@@ -71,4 +99,7 @@ public class Main {
 
         return (currentYear - dob);
     }
+
+
+
 }
