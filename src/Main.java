@@ -1,4 +1,6 @@
 import secion07.Car;
+import secion07.Customer;
+import secion07.Person;
 import secion07.SimpleCalculator;
 
 import java.util.Scanner;
@@ -19,7 +21,25 @@ public class Main {
         car.setMake("Audi");
 
         System.out.println("Make: " + car.getMake());
+        // ==========================================
 
+        // Person class
+        Person newPerson = new Person("Nemanja");
+        Person irinaPerson = new Person("Karaklajic", 32);
+        System.out.println(newPerson.getFirstName());
+        System.out.println(irinaPerson.getLastName() + " " + irinaPerson.getAge());
+        // ==========================================
+
+        // Customer Challenge class
+        Customer newCustomer = new Customer("Nikola", "nikola@email.com", 4444);
+        Customer chiliCustomer = new Customer(); // no arguments
+        Customer oldCustomer = new Customer("Balerina", "balerina@email.com"); // name and email arguments customer
+
+        System.out.println("Pass all arguments:" + " " + newCustomer.getName() + " " + newCustomer.getEmailAddress() + " " + newCustomer.getCreditLimit());
+        System.out.println("No arguments class:" + " " +chiliCustomer.getName() + " " + chiliCustomer.getEmailAddress() + " " + chiliCustomer.getCreditLimit());
+        System.out.println("Only name and email arguments:" + " " +  oldCustomer.getName() + " " + oldCustomer.getEmailAddress() + " " + oldCustomer.getCreditLimit());
+
+        // ==========================================
         SimpleCalculator calculator = new SimpleCalculator();
 
         calculator.setFirstNumber(5.0);
@@ -31,6 +51,7 @@ public class Main {
         calculator.setSecondNumber(0);
         System.out.println("multiply= " + calculator.getMultiplicationResult());
         System.out.println("divide= " + calculator.getDivisionResult());
+        // ==========================================
 
 //        int myAge = 35;
 //        String yourAge = "33";
