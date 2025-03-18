@@ -60,22 +60,52 @@ public class Main {
 
         // Student class
         for(int i = 1; i <= 5; i++) {
-            Student student = new Student("14564" + i,
+//            Student student = new Student("14564" + i,
+//                    switch (i) {
+//                case 1 -> "Nemanja";
+//                case 2 -> "Irina";
+//                case 3 -> "Jelena";
+//                case 4 -> "Sasha";
+//                case 5 -> "Anja";
+//                default -> "Anonymous";
+//            },
+//                    "18/3/2020",
+//                    "JavaMasterClass"
+//                    );
+
+            LPAStudent student = new LPAStudent("14564" + i,
                     switch (i) {
-                case 1 -> "Nemanja";
-                case 2 -> "Irina";
-                case 3 -> "Jelena";
-                case 4 -> "Sasha";
-                case 5 -> "Anja";
-                default -> "Anonymous";
-            },
+                        case 1 -> "Nemanja";
+                        case 2 -> "Irina";
+                        case 3 -> "Jelena";
+                        case 4 -> "Sasha";
+                        case 5 -> "Anja";
+                        default -> "Anonymous";
+                    },
                     "18/3/2020",
                     "JavaMasterClass"
-                    );
+            );
+
             System.out.println(student);
         }
 
+        Student student = new Student("123123", "Jelena", "30/03/1996", "JavaMasterClass");
+        LPAStudent lpaStudent = new LPAStudent("561233", "Filip", "30/07/2017", "JS");
+
+        System.out.println(student.getName());
+        System.out.println(lpaStudent.id());
+
         // ==========================================
+
+        // Wall code challenge
+         Wall wall = new Wall(5,4);
+        System.out.println(wall.getArea()); // 20.0
+        wall.setHeight(-1.5);
+        System.out.println("width: " + wall.getWidth()); // 5.0
+        System.out.println("height: " + wall.getHeight()); // 0.0
+        System.out.println("area: " + wall.getArea()); // 0.0
+        // ==========================================
+
 
 
 //        int myAge = 35;
