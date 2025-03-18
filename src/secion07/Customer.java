@@ -9,7 +9,7 @@ public class Customer {
     // No arguments class constructor
     public Customer() {
         // another constructor - 2-parameters
-        this("Chili", "chiliue@email.com"); // chaining -> it will take `creditLimit` from default defined constructor (line: 16)
+        this("Chili", "chiliue@email.com"); // CHAINING -> it will take `creditLimit` from default defined constructor (line: 16)
         // it will take credit limit for passing w-arguments constructor, as we made (one line up) another constructor passing TWO parameters.
     }
 

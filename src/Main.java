@@ -1,7 +1,4 @@
-import secion07.Car;
-import secion07.Customer;
-import secion07.Person;
-import secion07.SimpleCalculator;
+import secion07.*;
 
 import java.util.Scanner;
 
@@ -10,6 +7,14 @@ import java.util.Scanner;
 public class Main {
     // public - means that any other class in any package can access this class.
     // if it is null (omitted) - package access / the class is accessible only to classes in the same package.
+
+    // Static vs Instance
+    // Whenever you see method that doesn't use instance variables, that method should probably be declared as STATIC method!
+    // main method is static method, it is called by java Virtual Machine (JVM) when it starts the Java application.
+
+    // static methods do not required an instance to be created (ClassName.methodName()) or if in the same class (just methodName());
+    // When to create Static/Instance method? Does it use any fields (instance variables) or instance methods? (if YES - instance method, if NOT - static method);
+
     public static void main(String[] args) {
         Car car = new Car();
         car.describeCar();
@@ -52,6 +57,26 @@ public class Main {
         System.out.println("multiply= " + calculator.getMultiplicationResult());
         System.out.println("divide= " + calculator.getDivisionResult());
         // ==========================================
+
+        // Student class
+        for(int i = 1; i <= 5; i++) {
+            Student student = new Student("14564" + i,
+                    switch (i) {
+                case 1 -> "Nemanja";
+                case 2 -> "Irina";
+                case 3 -> "Jelena";
+                case 4 -> "Sasha";
+                case 5 -> "Anja";
+                default -> "Anonymous";
+            },
+                    "18/3/2020",
+                    "JavaMasterClass"
+                    );
+            System.out.println(student);
+        }
+
+        // ==========================================
+
 
 //        int myAge = 35;
 //        String yourAge = "33";
