@@ -93,8 +93,7 @@ public class Main {
         LPAStudent lpaStudent = new LPAStudent("561233", "Filip", "30/07/2017", "JS");
 
         System.out.println(student.getName());
-        System.out.println(lpaStudent.id());
-
+        System.out.println(lpaStudent.id()); // setter and getters within Record are methods with the same name as field. all we need is to instanceName.fieldName();
         // ==========================================
 
         // Wall code challenge

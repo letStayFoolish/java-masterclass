@@ -7,6 +7,7 @@ public class Student {
      String dateOfBirth;
      String classList;
 
+     // Constructor
     public Student(String id, String name, String dateOfBirth, String classList) {
         this.id = id;
         this.name = name;
