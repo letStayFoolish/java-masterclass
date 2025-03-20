@@ -119,7 +119,16 @@ public class Main {
         System.out.println("number.real= " + number.getReal()); // 3.0
         System.out.println("number.imaginary= " + number.getImaginary()); // -5.0
 
+
         // ==========================================
+        // Inheritance - Animal Class
+        Animal animal = new Animal("Generic type", "big", 200);
+        doAnimalStuff(animal, "slow");
+
+        Dog dog = new Dog();
+        doAnimalStuff(dog, "fast");
+        // ==========================================
+
 
 //        int myAge = 35;
 //        String yourAge = "33";
@@ -189,6 +198,10 @@ public class Main {
         return (currentYear - dob);
     }
 
-
-
+    public static void doAnimalStuff(Animal animal, String speed) {
+        animal.makeNoise();
+        animal.move(speed);
+        System.out.println(animal);
+        System.out.println("___________");
+    }
 }
