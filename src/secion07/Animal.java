@@ -1,5 +1,6 @@
 package secion07;
 
+// Good example of Polymorphism
 public class Animal {
     private String type;
     private String size;
