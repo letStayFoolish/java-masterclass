@@ -131,6 +131,9 @@ public class Main {
         Dog yorkie = new Dog("Yorkie", 15);
         doAnimalStuff(yorkie, "fast");
         yorkie.toString();
+
+        Fish fish = new Fish("Skusha", 160, 4, 10);
+        doAnimalStuff(fish, "fast");
         // ==========================================
 
 
