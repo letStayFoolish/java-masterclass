@@ -3,11 +3,11 @@ package secion07;
 public class Animal {
     private String type;
     private String size;
-    private int weight;
+    private double weight;
 
     public Animal() {};
 
-    public Animal(String type, String size, int weight) {
+    public Animal(String type, String size, double weight) {
         this.type = type;
         this.size = size;
         this.weight = weight;

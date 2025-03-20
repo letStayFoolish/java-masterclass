@@ -127,6 +127,10 @@ public class Main {
 
         Dog dog = new Dog();
         doAnimalStuff(dog, "fast");
+
+        Dog yorkie = new Dog("Yorkie", 15);
+        doAnimalStuff(yorkie, "fast");
+        yorkie.toString();
         // ==========================================
 
 
