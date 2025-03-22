@@ -136,6 +136,24 @@ public class Main {
         doAnimalStuff(fish, "fast");
         // ==========================================
 
+        // Inheritance Code Challenge
+        Worker worker = new Worker("Chili", "30.11.1990");
+        System.out.println(worker);
+
+        Employee irina = new Employee("IrinaG", "21.10.1994", "21.03.2025");
+        Employee nemanja = new Employee("Nemanja", "21.10.1994", "21.03.2025");
+        System.out.println(irina);
+        System.out.println(irina.getAge());
+        System.out.println(irina.collectPay());
+        System.out.println(nemanja);
+
+        SalariedEmployee joe = new SalariedEmployee("Joe", "25.06.1888", "16.10.2021", 35000);
+        joe.retire();
+        System.out.println("Joe pay check: $" + joe.collectPay());
+
+        // ==========================================
+
+
 
 //        int myAge = 35;
 //        String yourAge = "33";
