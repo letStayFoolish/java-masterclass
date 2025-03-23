@@ -1,4 +1,5 @@
 import secion07.*;
+import section08.*;
 
 import java.util.Scanner;
 
@@ -227,6 +228,22 @@ public class Main {
         System.out.println("cuboid.height= " + cuboid.getHeight());
         System.out.println("cuboid.volume= " + cuboid.getVolume());
 
+        // ==========================================
+
+        // Product - Personal computer Inheritance vs Composition
+        ComputerCase theCase = new ComputerCase("2208", "Dell", "240");
+        Monitor theMonitor = new Monitor("27inch Beast", "Acer", 27, "2540 x 1440");
+        Dimensions dimensions = new Dimensions(4, 6, 5);
+        Motherboard theMotherboard = new Motherboard("BJ-200", "Asus",4, 6, "v2.44", dimensions);
+        PersonalComputer chiliPC = new PersonalComputer("2208", "Dell", theMotherboard, theMonitor, theCase);
+
+        // Inheritance
+//        chiliPC.getMonitor().drawPixelAt(10, 10, "green");
+//        chiliPC.getComputerCase().pressPowerButton();
+//        chiliPC.getMotherboard().loadProgram("MacOS");
+
+        // Composition
+        chiliPC.powerUp();
         // ==========================================
 
 

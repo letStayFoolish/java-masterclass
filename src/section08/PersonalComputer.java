@@ -13,15 +13,27 @@ public class PersonalComputer extends ComputerProduct {
         this.computerCase = computerCase;
     }
 
-    public Motherboard getMotherboard() {
-        return motherboard;
+    // Inheritance - less flexible
+//    public Motherboard getMotherboard() {
+//        return motherboard;
+//    }
+//
+//    public Monitor getMonitor() {
+//        return monitor;
+//    }
+//
+//    public ComputerCase getComputerCase() {
+//        return computerCase;
+//    }
+
+    // Composition
+    private void drawLogo() {
+        monitor.drawPixelAt(10, 10, "yellow");
     }
 
-    public Monitor getMonitor() {
-        return monitor;
-    }
-
-    public ComputerCase getComputerCase() {
-        return computerCase;
+    public void powerUp() {
+        motherboard.loadProgram("Windows OS");
+        computerCase.pressPowerButton();
+        drawLogo();
     }
 }
