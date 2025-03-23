@@ -6,16 +6,18 @@ public class Worker {
     private String endDate;
 
     // Add empty constructor for the flexibility of the class Worker;
-    public Worker() {}
+    public Worker() {
+    }
 
     public Worker(String name, String birthDate) {
         this.name = name;
         this.birthDate = birthDate;
     }
 
+    
     public int getAge() {
         int currentYear = 2025;
-        int birthYear =  Integer.parseInt(this.birthDate.substring(6)); // dd.mm. -> substring these 6 char
+        int birthYear = Integer.parseInt(this.birthDate.substring(6)); // dd.mm. -> substring these 6 char
         return currentYear - birthYear;
     }
 
