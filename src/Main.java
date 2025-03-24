@@ -245,7 +245,22 @@ public class Main {
         // Composition
         chiliPC.powerUp();
         // ==========================================
+        // Smart Kitchen codding challenge
+        SmartKitchen kitchen1 = new SmartKitchen();
 
+        // Try to use Composition over Inheritance, or look for Composition over Inheritance first!!!
+
+//        kitchen1.getCoffeeMaker().setHasWorkToDo(true);
+//        kitchen1.getDishWasher().setHasWorkToDo(true);
+//        kitchen1.getIceBox().setHasWorkToDo(true);
+//
+//        kitchen1.getCoffeeMaker().brewCoffee();
+//        kitchen1.getDishWasher().doDishes();
+//        kitchen1.getIceBox().orderFood();
+        kitchen1.setKitchenState(true,false,true);
+        kitchen1.doKitchenWork();
+
+        // ==========================================
 
 //        int myAge = 35;
 //        String yourAge = "33";
