@@ -98,9 +98,9 @@ public class Main {
         // ==========================================
 
         // Wall code challenge
-         Wall wall = new Wall(5,4);
+//         Wall wall = new Wall(5,4);
 //        System.out.println(wall.getArea()); // 20.0
-        wall.setHeight(-1.5);
+//        wall.setHeight(-1.5);
 //        System.out.println("width: " + wall.getWidth()); // 5.0
 //        System.out.println("height: " + wall.getHeight()); // 0.0
 //        System.out.println("area: " + wall.getArea()); // 0.0
@@ -261,6 +261,25 @@ public class Main {
 //        kitchen1.getIceBox().orderFood();
         kitchen1.setKitchenState(true,false,true);
         kitchen1.doKitchenWork();
+
+        // ==========================================
+        // Bedroom Composition Exercise: Creating Classes for Lamp, Bed, and Wall
+
+        Wall wall1 = new Wall("West");
+        Wall wall2 = new Wall("East");
+        Wall wall3 = new Wall("South");
+        Wall wall4 = new Wall("North");
+
+        Ceiling ceiling = new Ceiling(12, 55);
+
+        Bed bed = new Bed("Modern", 4, 3, 2, 1);
+
+        Lamp lamp = new Lamp("Classic", false, 75);
+
+        Bedroom bedRoom = new Bedroom("YOUR NAME HERE", wall1, wall2, wall3, wall4, ceiling,bed, lamp);
+
+        bedRoom.makeBed();
+        bedRoom.getLamp().turnOn();
 
         // ==========================================
 
