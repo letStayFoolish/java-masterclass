@@ -42,7 +42,7 @@ class CoffeeMaker {
     }
 
     public void brewCoffee() {
-        if(hasWorkToDo) {
+        if (hasWorkToDo) {
             System.out.println("Coffee making done.");
             this.hasWorkToDo = false;
         }
@@ -57,7 +57,7 @@ class DishWasher {
     }
 
     public void doDishes() {
-        if(hasWorkToDo) {
+        if (hasWorkToDo) {
             System.out.println("Dishes washing done.");
             this.hasWorkToDo = false;
         }
@@ -72,7 +72,7 @@ class Refrigerator {
     }
 
     public void orderFood() {
-        if(hasWorkToDo) {
+        if (hasWorkToDo) {
             System.out.println("Ordering food done.");
             this.hasWorkToDo = false;
         }

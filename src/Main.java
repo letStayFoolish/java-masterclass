@@ -244,7 +244,9 @@ public class Main {
 
         // Composition
         chiliPC.powerUp();
+
         // ==========================================
+
         // Smart Kitchen codding challenge
         SmartKitchen kitchen1 = new SmartKitchen();
 
