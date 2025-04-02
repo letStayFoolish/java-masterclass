@@ -288,6 +288,18 @@ public class Main {
         chili.getHealth(10);
         System.out.println(chili.healthRemaining());
         // ==========================================
+        // Printer - Encapsulation example
+
+        Printer printer = new Printer(50, false);
+        System.out.println("initial page count = " + printer.getPagesPrinted());
+        int pagesPrinted = printer.printPages(5);
+        System.out.printf("Current Job Pages: %d, Printer Total: %d %n", pagesPrinted, printer.getPagesPrinted());
+
+        pagesPrinted = printer.printPages(10);
+        System.out.printf("Current Job Pages: %d, Printer Total: %d %n", pagesPrinted, printer.getPagesPrinted());
+
+        // ==========================================
+
 
 //        int myAge = 35;
 //        String yourAge = "33";
