@@ -282,6 +282,9 @@ public class Main {
         bedRoom.getLamp().turnOn();
 
         // ==========================================
+        // Encapsulation
+        // In Java, encapsulation means hiding things by making them private or inaccessible.
+        // ==========================================
 
 //        int myAge = 35;
 //        String yourAge = "33";
