@@ -284,6 +284,9 @@ public class Main {
         // ==========================================
         // Encapsulation
         // In Java, encapsulation means hiding things by making them private or inaccessible.
+        Player chili = new Player("Chili");
+        chili.getHealth(10);
+        System.out.println(chili.healthRemaining());
         // ==========================================
 
 //        int myAge = 35;
