@@ -298,6 +298,35 @@ public class Main {
         pagesPrinted = printer.printPages(2);
         System.out.println("Pages printed was " + pagesPrinted +" new total print count for printer = " +printer.getPagesPrinted());
         // ==========================================
+        // Polymorphism
+        //Movie theMovie = new Movie("Star Wars");
+//        Movie theMovie = new AdventureMovie("Star Wars");
+//        theMovie.watchMovie();
+//Movie theMovie = Movie.getMovie("AdventureMovie", "Indiana Jones");
+//Movie maybeComedy = Movie.getMovie("Comedy", "Jackie Chan");
+//Movie sfMovie = Movie.getMovie("Science", "Star Wars");
+//        maybeComedy.watchMovie();
+//        sfMovie.watchMovie();
+
+        Scanner s = new Scanner(System.in);
+        while(true) {
+            System.out.println("Enter type (A for Adventure, C for Comedy, S for Science Fiction, or Q to quit): ");
+            String type = s.nextLine();
+
+            if("Qq".contains(type)) {
+                break;
+            }
+
+            System.out.println("Enter movie name: ");
+            String title = s.nextLine();
+
+            Movie movie = Movie.getMovie(type, title);
+
+            movie.watchMovie();
+            return;
+        }
+
+        // ==========================================
 
 
 //        int myAge = 35;
