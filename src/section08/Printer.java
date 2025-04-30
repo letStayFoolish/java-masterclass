@@ -24,14 +24,14 @@ public class Printer {
     }
 
     public int printPages(int pages) {
-        int pagesToPrint = this.duplex ? (pages / 2) + (pages % 2) : pages;
-        this.pagesPrinted += pagesToPrint;
+        int jobPages = this.duplex ? (pages / 2) + (pages % 2) : pages;
+        this.pagesPrinted += jobPages;
 
         if (this.duplex) {
             System.out.println("This is a duplex printer.");
         }
 
-        return pagesToPrint;
+        return jobPages;
     }
 
     public int getPagesPrinted() {

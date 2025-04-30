@@ -3,7 +3,7 @@ import section08.*;
 
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     // public - means that any other class in any package can access this class.
@@ -19,21 +19,21 @@ public class Main {
     public static void main(String[] args) {
         Car car = new Car();
         car.describeCar();
-//        System.out.println("Make: " + car.getMake());
+        // System.out.println("Make: " + car.getMake());
 
-//        System.out.println("Model: " + car.getModel());
-//        System.out.println("Color: " + car.getColor ());
+        // System.out.println("Model: " + car.getModel());
+        // System.out.println("Color: " + car.getColor ());
         car.setMake("Honda");
         car.setMake("Audi");
 
-//        System.out.println("Make: " + car.getMake());
+        // System.out.println("Make: " + car.getMake());
         // ==========================================
 
         // Person class
         Person newPerson = new Person("Nemanja");
         Person irinaPerson = new Person("Karaklajic", 32);
-//        System.out.println(newPerson.getFirstName());
-//        System.out.println(irinaPerson.getLastName() + " " + irinaPerson.getAge());
+        // System.out.println(newPerson.getFirstName());
+        // System.out.println(irinaPerson.getLastName() + " " + irinaPerson.getAge());
         // ==========================================
 
         // Customer Challenge class
@@ -41,38 +41,38 @@ public class Main {
         Customer chiliCustomer = new Customer(); // no arguments
         Customer oldCustomer = new Customer("Balerina", "balerina@email.com"); // name and email arguments customer
 
-//        System.out.println("Pass all arguments:" + " " + newCustomer.getName() + " " + newCustomer.getEmailAddress() + " " + newCustomer.getCreditLimit());
-//        System.out.println("No arguments class:" + " " +chiliCustomer.getName() + " " + chiliCustomer.getEmailAddress() + " " + chiliCustomer.getCreditLimit());
-//        System.out.println("Only name and email arguments:" + " " +  oldCustomer.getName() + " " + oldCustomer.getEmailAddress() + " " + oldCustomer.getCreditLimit());
+        // System.out.println("Pass all arguments:" + " " + newCustomer.getName() + " " + newCustomer.getEmailAddress() + " " + newCustomer.getCreditLimit());
+        // System.out.println("No arguments class:" + " " +chiliCustomer.getName() + " " + chiliCustomer.getEmailAddress() + " " + chiliCustomer.getCreditLimit());
+        // System.out.println("Only name and email arguments:" + " " +  oldCustomer.getName() + " " + oldCustomer.getEmailAddress() + " " + oldCustomer.getCreditLimit());
 
         // ==========================================
         SimpleCalculator calculator = new SimpleCalculator();
 
         calculator.setFirstNumber(5.0);
         calculator.setSecondNumber(4);
-//        System.out.println("add= " + calculator.getAdditionResult());
-//        System.out.println("subtract= " + calculator.getSubtractionResult());
+        // System.out.println("add= " + calculator.getAdditionResult());
+        // System.out.println("subtract= " + calculator.getSubtractionResult());
 
         calculator.setFirstNumber(5.25);
         calculator.setSecondNumber(0);
-//        System.out.println("multiply= " + calculator.getMultiplicationResult());
-//        System.out.println("divide= " + calculator.getDivisionResult());
+        // System.out.println("multiply= " + calculator.getMultiplicationResult());
+        // System.out.println("divide= " + calculator.getDivisionResult());
         // ==========================================
 
         // Student class
         for(int i = 1; i <= 5; i++) {
-//            Student student = new Student("14564" + i,
-//                    switch (i) {
-//                case 1 -> "Nemanja";
-//                case 2 -> "Irina";
-//                case 3 -> "Jelena";
-//                case 4 -> "Sasha";
-//                case 5 -> "Anja";
-//                default -> "Anonymous";
-//            },
-//                    "18/3/2020",
-//                    "JavaMasterClass"
-//                    );
+        // Student student = new Student("14564" + i,
+        // switch (i) {
+        // case 1 -> "Nemanja";
+        // case 2 -> "Irina";
+        // case 3 -> "Jelena";
+        // case 4 -> "Sasha";
+        // case 5 -> "Anja";
+        // default -> "Anonymous";
+        // },
+        // "18/3/2020",
+        // "JavaMasterClass"
+        // );
 
             LPAStudent student = new LPAStudent("14564" + i,
                     switch (i) {
@@ -294,13 +294,14 @@ public class Main {
         // ==========================================
 
         // Printer - Encapsulation example
-        Printer printer = new Printer(50, true);
+//        Printer printer = new Printer(50, true);
+        Printer printer = new Printer(50, false);
         System.out.println(printer.addToner(50));
-        System.out.println("initial page count = " +printer.getPagesPrinted());
-        int pagesPrinted = printer.printPages(4);
-        System.out.println("Pages printed was " + pagesPrinted +" new total print count for printer = " +printer.getPagesPrinted());
-        pagesPrinted = printer.printPages(2);
-        System.out.println("Pages printed was " + pagesPrinted +" new total print count for printer = " +printer.getPagesPrinted());
+        System.out.println("initial page count = " + printer.getPagesPrinted());
+        int pagesPrinted = printer.printPages(5);
+        System.out.printf("Current Job Pages: %d, Printer Total: %d %n", pagesPrinted, printer.getPagesPrinted());
+        pagesPrinted = printer.printPages(10);
+        System.out.printf("Current Job Pages: %d, Printer Total: %d %n", pagesPrinted, printer.getPagesPrinted());
         // ==========================================
 
         // Polymorphism
