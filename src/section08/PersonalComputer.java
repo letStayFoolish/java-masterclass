@@ -24,17 +24,17 @@ public class PersonalComputer extends ComputerProduct {
     }
 
     // Inheritance - less flexible
-//    public Motherboard getMotherboard() {
-//        return motherboard;
-//    }
-//
-//    public Monitor getMonitor() {
-//        return monitor;
-//    }
-//
-//    public ComputerCase getComputerCase() {
-//        return computerCase;
-//    }
+    //    public Motherboard getMotherboard() {
+    //        return motherboard;
+    //    }
+    //
+    //    public Monitor getMonitor() {
+    //        return monitor;
+    //    }
+    //
+    //    public ComputerCase getComputerCase() {
+    //        return computerCase;
+    //    }
 
     // Composition
     private void drawLogo() {

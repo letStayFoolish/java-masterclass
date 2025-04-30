@@ -21,10 +21,10 @@ public class SmartKitchen {
         return iceBox;
     }
 
-    public void setKitchenState(boolean coffeeFlag, boolean dishesFlag, boolean foodFlag) {
+    public void setKitchenState(boolean coffeeFlag, boolean dishesFlag, boolean fridgeFlag) {
         brewMaster.setHasWorkToDo(coffeeFlag);
         dishWasher.setHasWorkToDo(dishesFlag);
-        iceBox.setHasWorkToDo(foodFlag);
+        iceBox.setHasWorkToDo(fridgeFlag);
     }
 
     public void doKitchenWork() {
@@ -43,7 +43,7 @@ class CoffeeMaker {
 
     public void brewCoffee() {
         if (hasWorkToDo) {
-            System.out.println("Coffee making done.");
+            System.out.println("Coffee making.");
             this.hasWorkToDo = false;
         }
     }
@@ -58,7 +58,7 @@ class DishWasher {
 
     public void doDishes() {
         if (hasWorkToDo) {
-            System.out.println("Dishes washing done.");
+            System.out.println("Washing dishes.");
             this.hasWorkToDo = false;
         }
     }
@@ -73,7 +73,7 @@ class Refrigerator {
 
     public void orderFood() {
         if (hasWorkToDo) {
-            System.out.println("Ordering food done.");
+            System.out.println("Ordering food.");
             this.hasWorkToDo = false;
         }
     }

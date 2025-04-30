@@ -243,7 +243,6 @@ public class Main {
 
         // Composition
         chiliPC.powerUp();
-
         // ==========================================
 
         // Smart Kitchen codding challenge
@@ -251,17 +250,18 @@ public class Main {
 
         // Try to use Composition over Inheritance, or look for Composition over Inheritance first!!!
 
-//        kitchen1.getCoffeeMaker().setHasWorkToDo(true);
-//        kitchen1.getDishWasher().setHasWorkToDo(true);
-//        kitchen1.getIceBox().setHasWorkToDo(true);
-//
-//        kitchen1.getCoffeeMaker().brewCoffee();
-//        kitchen1.getDishWasher().doDishes();
-//        kitchen1.getIceBox().orderFood();
+        // kitchen1.getCoffeeMaker().setHasWorkToDo(true);
+        // kitchen1.getDishWasher().setHasWorkToDo(true);
+        // kitchen1.getIceBox().setHasWorkToDo(true);
+
+        // kitchen1.getDishWasher().doDishes();
+        // kitchen1.getIceBox().orderFood();
+        // kitchen1.getCoffeeMaker().brewCoffee();
+        // Composition is very powerful
         kitchen1.setKitchenState(true,false,true);
         kitchen1.doKitchenWork();
-
         // ==========================================
+
         // Bedroom Composition Exercise: Creating Classes for Lamp, Bed, and Wall
 
         Wall wall1 = new Wall("West");
