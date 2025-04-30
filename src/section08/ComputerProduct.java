@@ -5,9 +5,9 @@ public class ComputerProduct {
     private String manufacturer;
 
     // This can go to the Dimensions class -> Composition, so the all subclasses don't need to include these
-//    private int width;
-//    private int height;
-//    private int depth;
+    // private int width;
+    // private int height;
+    // private int depth;
 
     public ComputerProduct(String model, String manufacturer) {
         this.model = model;

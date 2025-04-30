@@ -210,10 +210,10 @@ public class Main {
 //        System.out.println("circle.radius= " + circle.getRadius());
 //        System.out.println("circle.area= " + circle.getArea());
         Cylinder cylinder = new Cylinder(5.55, 7.25);
-//        System.out.println("cylinder.radius= " + cylinder.getRadius());
-//        System.out.println("cylinder.height= " + cylinder.getHeight());
-//        System.out.println("cylinder.area= " + cylinder.getArea());
-//        System.out.println("cylinder.volume= " + cylinder.getVolume());
+        // System.out.println("cylinder.radius= " + cylinder.getRadius());
+        // System.out.println("cylinder.height= " + cylinder.getHeight());
+        // System.out.println("cylinder.area= " + cylinder.getArea());
+        // System.out.println("cylinder.volume= " + cylinder.getVolume());
         // ==========================================
 
         // Cuboid Pool Area Calculation Coding challenge
@@ -227,7 +227,6 @@ public class Main {
         System.out.println("cuboid.area= " + cuboid.getArea());
         System.out.println("cuboid.height= " + cuboid.getHeight());
         System.out.println("cuboid.volume= " + cuboid.getVolume());
-
         // ==========================================
 
         // Product - Personal computer Inheritance vs Composition
@@ -238,30 +237,28 @@ public class Main {
         PersonalComputer chiliPC = new PersonalComputer("2208", "Dell", theMotherboard, theMonitor, theCase);
 
         // Inheritance
-//        chiliPC.getMonitor().drawPixelAt(10, 10, "green");
-//        chiliPC.getComputerCase().pressPowerButton();
-//        chiliPC.getMotherboard().loadProgram("MacOS");
+        // chiliPC.getMonitor().drawPixelAt(10, 10, "red"); // => theMonitor.drawPixelAt(10, 10, "red");
+        // chiliPC.getComputerCase().pressPowerButton();
+        // chiliPC.getMotherboard().loadProgram("MacOS");
 
         // Composition
         chiliPC.powerUp();
         // ==========================================
 
 
-//        int myAge = 35;
-//        String yourAge = "33";
-//
-//        System.out.println("My age = " + myAge);
-//        System.out.println("Our age = " + (myAge - Integer.parseInt(yourAge))); // parseInt is static method of the class Integer
-
+        // int myAge = 35;
+        // String yourAge = "33";
+        // System.out.println("My age = " + myAge);
+        // System.out.println("Our age = " + (myAge - Integer.parseInt(yourAge))); // parseInt is static method of the class Integer
 
         // The `new` keyword is used in what Java calls a Class Instance Creation Expression. ClassName variableName = new ClassName();
         int currentYear = 2025;
         // Handling exception
 
         try {
-//            System.out.println(getInputFromConsole(currentYear));
+            // System.out.println(getInputFromConsole(currentYear));
         } catch (NullPointerException e) {
-//            System.out.println(getInputFromScanner(currentYear));
+            // System.out.println(getInputFromScanner(currentYear));
         }
     }
 
