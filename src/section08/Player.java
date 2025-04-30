@@ -8,12 +8,21 @@ package section08;
  * Use access modifiers that aren't private, only fot the methods that the calling code needs to use.
  */
 public class Player {
-    private String name;
-    private int health;
-    private String weapon;
+    // public String name;
+    // public int health;
+    // public String weapon;
 
+    // Proper way of encapsulation
+     private String name;
+     private int health;
+     private String weapon;
+
+    public Player() {
+    }
+
+    // Creating an instance of player by just passing the name
     public Player(String name) {
-        this(name, 100, "Sword");
+        this(name, 100, "Sword"); // calling three-parameter constructor - chaining constructor
     }
 
     public Player(String name, int health, String weapon) {
@@ -23,7 +32,7 @@ public class Player {
     }
 
     public void loseHealth(int damage) {
-        this.health -= damage;
+        this.health -= damage; // this.health = this.health - damage;
 
         if (this.health <= 0) {
             System.out.println("Player knocked out of game.");
@@ -37,6 +46,7 @@ public class Player {
 
     public void restoreHealth(int extraHealth) {
         this.health += extraHealth;
+
         if (this.health > 100) {
             this.health = 100;
             System.out.println("Player's health fully restored.");
@@ -46,6 +56,7 @@ public class Player {
     }
 
     public int healthRemaining() {
+        System.out.println("Health remaining: " + this.health);
         return this.health;
     }
 }

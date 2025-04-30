@@ -263,7 +263,6 @@ public class Main {
         // ==========================================
 
         // Bedroom Composition Exercise: Creating Classes for Lamp, Bed, and Wall
-
         Wall wall1 = new Wall("West");
         Wall wall2 = new Wall("East");
         Wall wall3 = new Wall("South");
@@ -279,16 +278,22 @@ public class Main {
 
         bedRoom.makeBed();
         bedRoom.getLamp().turnOn();
-
         // ==========================================
+
         // Encapsulation
         // In Java, encapsulation means hiding things by making them private or inaccessible.
-        Player chili = new Player("Chili");
-        chili.getHealth(10);
+         Player chili = new Player("Chili", 26, "Mighty Weapon");
+        // Player chili = new Player();
+        // chili.name = "NemanjaK"; // if we set access to public for this field
+        // chili.health = 20; // if we set access to public for this field
+        // chili.weapon = "Pistol"; // if we set access to public for this field
+
+        chili.getHealth(3);
+        chili.loseHealth(12);
         System.out.println(chili.healthRemaining());
         // ==========================================
-        // Printer - Encapsulation example
 
+        // Printer - Encapsulation example
         Printer printer = new Printer(50, true);
         System.out.println(printer.addToner(50));
         System.out.println("initial page count = " +printer.getPagesPrinted());
@@ -297,15 +302,16 @@ public class Main {
         pagesPrinted = printer.printPages(2);
         System.out.println("Pages printed was " + pagesPrinted +" new total print count for printer = " +printer.getPagesPrinted());
         // ==========================================
+
         // Polymorphism
-        //Movie theMovie = new Movie("Star Wars");
-//        Movie theMovie = new AdventureMovie("Star Wars");
-//        theMovie.watchMovie();
-//Movie theMovie = Movie.getMovie("AdventureMovie", "Indiana Jones");
-//Movie maybeComedy = Movie.getMovie("Comedy", "Jackie Chan");
-//Movie sfMovie = Movie.getMovie("Science", "Star Wars");
-//        maybeComedy.watchMovie();
-//        sfMovie.watchMovie();
+        // Movie theMovie = new Movie("Star Wars");
+        // Movie theMovie = new AdventureMovie("Star Wars");
+        // theMovie.watchMovie();
+        // Movie theMovie = Movie.getMovie("AdventureMovie", "Indiana Jones");
+        // Movie maybeComedy = Movie.getMovie("Comedy", "Jackie Chan");
+        // Movie sfMovie = Movie.getMovie("Science", "Star Wars");
+        // maybeComedy.watchMovie();
+        // sfMovie.watchMovie();
 
         Scanner s = new Scanner(System.in);
         while(true) {
