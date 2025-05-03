@@ -294,24 +294,26 @@ public class Main {
         // ==========================================
 
         // Printer - Encapsulation example
-//        Printer printer = new Printer(50, true);
+        // Printer printer = new Printer(50, true);
         Printer printer = new Printer(50, false);
         System.out.println(printer.addToner(50));
         System.out.println("initial page count = " + printer.getPagesPrinted());
         int pagesPrinted = printer.printPages(5);
+        // %n: adds a line separator after.
+        // %d: adds thing you do want to print.
         System.out.printf("Current Job Pages: %d, Printer Total: %d %n", pagesPrinted, printer.getPagesPrinted());
         pagesPrinted = printer.printPages(10);
         System.out.printf("Current Job Pages: %d, Printer Total: %d %n", pagesPrinted, printer.getPagesPrinted());
         // ==========================================
 
         // Polymorphism
-        // Movie theMovie = new Movie("Star Wars");
-        // Movie theMovie = new AdventureMovie("Star Wars");
-        // theMovie.watchMovie();
+        // Movie theMovie1 = new Movie("Star Wars");
+         Movie theMovie1 = new AdventureMovie("Star Wars");
+         theMovie1.watchMovie();
         // Movie theMovie = Movie.getMovie("AdventureMovie", "Indiana Jones");
         // Movie maybeComedy = Movie.getMovie("Comedy", "Jackie Chan");
-        // Movie sfMovie = Movie.getMovie("Science", "Star Wars");
         // maybeComedy.watchMovie();
+        // Movie sfMovie = Movie.getMovie("Science", "Star Wars");
         // sfMovie.watchMovie();
 
         Scanner s = new Scanner(System.in);

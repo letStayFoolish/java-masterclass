@@ -6,10 +6,12 @@ public class AdventureMovie extends Movie {
         super(title);
     }
 
+    // uses parent's method plus additional logic added specifically for this subclass
     @Override
     public void watchMovie() {
         super.watchMovie();
 
+        // %s: replaces any string.
         System.out.printf(".. %s%n".repeat(3),
                 "Pleasant Scene",
                 "Scary Music",

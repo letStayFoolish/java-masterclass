@@ -8,7 +8,7 @@ public class Movie {
     }
 
     public void watchMovie() {
-        String instanceType = this.getClass().getSimpleName();
+        String instanceType = this.getClass().getSimpleName(); // this.getClass() - returns class type information of runtime instance, on which this method is executed.
         System.out.println(this.title + " is a " + instanceType + " film.");
     }
 
