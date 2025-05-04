@@ -1,5 +1,9 @@
 import secion07.*;
 import section08.*;
+import section08.MasterChallenge.MealOrder;
+import section08.PolymorphismChallenge.EletricCar;
+import section08.PolymorphismChallenge.GasPoweredCar;
+import section08.PolymorphismChallenge.HybridCar;
 
 import java.util.Scanner;
 
@@ -308,35 +312,111 @@ public class Main {
 
         // Polymorphism
         // Movie theMovie1 = new Movie("Star Wars");
-         Movie theMovie1 = new AdventureMovie("Star Wars");
-         theMovie1.watchMovie();
+        // Movie theMovie = new AdventureMovie("Star Wars");
+        // theMovie.watchMovie();
         // Movie theMovie = Movie.getMovie("AdventureMovie", "Indiana Jones");
-        // Movie maybeComedy = Movie.getMovie("Comedy", "Jackie Chan");
-        // maybeComedy.watchMovie();
+        // Polymorphism in action:
+//         Movie maybeComedy = Movie.getMovie("Comedy", "Jackie Chan");
+//         maybeComedy.watchMovie();
         // Movie sfMovie = Movie.getMovie("Science", "Star Wars");
         // sfMovie.watchMovie();
 
-        Scanner s = new Scanner(System.in);
-        while(true) {
-            System.out.println("Enter type (A for Adventure, C for Comedy, S for Science Fiction, or Q to quit): ");
-            String type = s.nextLine();
+        AdventureMovie iceAge = (AdventureMovie) Movie.getMovie("A", "Ice Age III");
+        iceAge.watchMovie();
 
-            if("Qq".contains(type)) {
-                break;
-            }
-
-            System.out.println("Enter movie name: ");
-            String title = s.nextLine();
-
-            Movie movie = Movie.getMovie(type, title);
-
-            movie.watchMovie();
-            return;
-        }
-
+//        Scanner s = new Scanner(System.in);
+//        while(true) {
+//            System.out.println("Enter type (A for Adventure, C for Comedy, S for Science Fiction, or Q to quit): ");
+//            String type = s.nextLine();
+//
+//            if("Qq".contains(type)) {
+//                break;
+//            }
+//
+//            System.out.println("Enter movie name: "); // prompt the user to enter a movie name
+//            String title = s.nextLine();
+//
+//            Movie movie = Movie.getMovie(type, title);
+//
+//            movie.watchMovie();
+//            return;
+//        }
         // ==========================================
+        // Using `var`
+        // By using `var` as a type, we are telling Java to figure out the compile-time type for us.
+        var airplane = Movie.getMovie("A", "Airplane");
+        airplane.watchMovie();
 
+        var plane = new Comedy( "Plane comedy movie!");
+        plane.watchComedy();
+        /**
+         * COMPILE Time Type: **declared** type. This type is declared as a variable reference, a method return type, or a method parameter.
+         * The compile time type is the declared type to the left of the assignment operator.
+         *
+         * RUN Time Type: **actual** type. This type is the type of the object that is currently being used.
+         * What is returned on the right side of the assignment operator from whatever expression or method is executed, sometimes can only be determined at runtime, when the code is executing conditionally through the statements in the code.
+         */
+        // Runtime Type Inspection: Mastering instanceof and pattern matching in Java
+        Object unknownObject = Movie.getMovie("A", "CarPlay");
+        if (unknownObject.getClass().getSimpleName().equals("Comedy")) {
+            Comedy c = (Comedy) unknownObject;
+            c.watchComedy();
+        } else if (unknownObject instanceof AdventureMovie) {
+            ((AdventureMovie) unknownObject).watchAdventure();
+        } else if (unknownObject instanceof ScienceFiction syfy) {
+            syfy.watchScienceFiction();
+        };
+        // instanceof - operator lets you test the type of an object or instance.
+        // The referece variable you are testing is the left operand.
+        // The TYPE you are testing for is the right operand.
+        // =======================================================================
+        // Polymorphism Challenge
+        section08.PolymorphismChallenge.Car car1 = new section08.PolymorphismChallenge.Car("2022 Blue Ferrari 296 GTS");
+        car1.startEngine();
+        car1.drive();
 
+        section08.PolymorphismChallenge.Car ferrari = new GasPoweredCar("2022 Blue Ferrari 296 GTS", 15.4, 6);
+        ferrari.startEngine();
+        ferrari.drive();
+
+        section08.PolymorphismChallenge.Car tesla = new EletricCar("2022 Red Tesla Model 3", 568, 75);
+        tesla.startEngine();
+        tesla.drive();
+
+        section08.PolymorphismChallenge.Car ferrariHybrid = new HybridCar("2022 Black Ferrari SF90 Stradale", 16, 8, 8);
+        ferrariHybrid.startEngine();
+        ferrariHybrid.drive();
+        // =======================================================================
+        // Burgers Challenge
+        System.out.println("=========== Burgers Challenge Start ================");
+        // MealOrder mealOrder1 = new MealOrder();
+//        Burger burger1 = new Burger("Cheese Burger", 55);
+//        Drink drink1 = new Drink("Coca Cola", 1.5, 15);
+//        SideItem sideItem1 = new SideItem("Tomato", 1.5);
+//
+//        MealOrder mealOrder1 = new MealOrder(burger1, drink1, sideItem1);
+//        mealOrder1.getBurger().setExtraToppings(2);
+//        mealOrder1.getDrink().setSize(2);
+//
+//        System.out.println(mealOrder1.toString());
+//        Item coke = new Item("drink", "Coke", 1.5);
+//        coke.printItem();
+//        coke.setSize('L');
+//        coke.printItem();
+//
+//        Item tomato = new Item("Topping", "Tomato", 3);
+//        tomato.printItem();
+
+//        Burger burger = new Burger("Regular", 4.00);
+//        burger.addToppings("Cheese", "Bacon", "Onion");
+//        burger.printItem();
+
+        MealOrder regular = new MealOrder();
+        regular.setExtraToppings("Onion", "Bacon", "Cheese");
+        regular.setDrinkSize('L');
+        regular.printItemizedList();
+        System.out.println("=========== Burgers Challenge End ================");
+        // =======================================================================
         // int myAge = 35;
         // String yourAge = "33";
         // System.out.println("My age = " + myAge);
