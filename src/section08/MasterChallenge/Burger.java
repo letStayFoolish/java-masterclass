@@ -6,12 +6,12 @@ public class Burger extends Item {
     private Item extraItem3;
 
     public Burger(String name, double price) {
-        super("Burger", name, price);
+        super("BURGER", name, price);
     }
 
     @Override
     public String getName() {
-        return super.getName() + " Burger";
+        return super.getName() + " BURGER";
     }
 
     @Override

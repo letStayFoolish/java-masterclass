@@ -4,7 +4,7 @@ public class Item {
     private String type;
     private String name;
     private double price;
-    private Character size = 'M';
+    private String size = "MEDIUM";
 
     public Item(String type, String name, double price) {
         this.type = type.toUpperCase();
@@ -29,15 +29,14 @@ public class Item {
 
     public double getAdjustedPrice() {
         return switch(size) {
-            case 'S' -> getBasePrice() - 0.5;
-//            case 'M' -> getBasePrice() + 0.5;
-            case 'L' -> getBasePrice() + 1.5;
+            case "SMALL" -> getBasePrice() - 0.5;
+            case "LARGE" -> getBasePrice() + 1.5;
             default -> getBasePrice();
         };
     }
 
-    public void setSize(Character size) {
-        this.size = size;
+    public void setSize(String updatedSize) {
+        this.size = updatedSize;
     }
 
     public static void printItem(String name, double price) {

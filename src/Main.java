@@ -411,10 +411,15 @@ public class Main {
 //        burger.addToppings("Cheese", "Bacon", "Onion");
 //        burger.printItem();
 
-        MealOrder regular = new MealOrder();
-        regular.setExtraToppings("Onion", "Bacon", "Cheese");
-        regular.setDrinkSize('L');
-        regular.printItemizedList();
+//        MealOrder regular = new MealOrder();
+//        regular.setExtraToppings("Onion", "Bacon", "Cheese");
+//        regular.setDrinkSize("LARGE");
+//        regular.printItemizedList();
+        MealOrder deluxeMeal = new MealOrder("deluxe", "7-up", "chili");
+        deluxeMeal.setExtraToppings("AVOCADO", "BACON", "MAYO", "LETTUCE", "CHEESE");
+        deluxeMeal.setDrinkSize("SMALL");
+        deluxeMeal.printItemizedList();
+
         System.out.println("=========== Burgers Challenge End ================");
         // =======================================================================
         // int myAge = 35;
