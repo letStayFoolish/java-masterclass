@@ -5,6 +5,7 @@ import section08.PolymorphismChallenge.EletricCar;
 import section08.PolymorphismChallenge.GasPoweredCar;
 import section08.PolymorphismChallenge.HybridCar;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 // TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -449,16 +450,39 @@ public class Main {
 //        int[] myIntArray2 = new int[]{1, 2, 3, 4, 5}; // or just
         // Shorten version
         int[] myIntArray2 = {1, 2, 3, 4, 5};
+//        int[] myIntArray2; // without initializer, default values for int are 0 -> {0, 0, 0, 0, 0};
+//        myIntArray2 = new int[5]; // without initializer, default values for int are 0 -> {0, 0, 0, 0, 0};
+
         System.out.println(myIntArray2[2]); // 3
         System.out.println(myIntArray2[myIntArray2.length - 1]); // 5
 
         // This won't work:
-//         int[] newArray; // 🚫
-//         newArray = {1, 2, 3, 4, 5}; // 🚫: Array initializer is not allowed here
+         // int[] newArray; // 🚫
+         // newArray = {1, 2, 3, 4, 5}; // 🚫: Array initializer is not allowed here
 
-        for(int i = 0; i < myIntArray2.length; i++) {
-            System.out.print(myIntArray2[i] + " ");
+        int[] newArray;
+        newArray = new int[5];
+
+        for(int i = 0; i < newArray.length; i++) {
+            newArray[i] = newArray.length - i;
         };
+
+//        for(int i = 0; i < newArray.length; i++) {
+//            System.out.print(newArray[i] + " ");
+//        };
+
+        // Enhanced For loop - not dealing with array index position, like in traditional for-loop
+        for(int element : newArray){
+            System.out.print(element + " ");
+        }
+
+        String arrayToString = Arrays.toString(newArray);
+
+        System.out.println("\nArray converted to the String: " + arrayToString);
+
+        // Array can be treated like any other object instance in Java!
+
+        System.out.println("===== Section 09 End =====");
     }
 
     public static String getInputFromConsole(int currentYear) {
