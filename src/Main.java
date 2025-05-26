@@ -436,6 +436,29 @@ public class Main {
         } catch (NullPointerException e) {
             // System.out.println(getInputFromScanner(currentYear));
         }
+
+        // Section 09 Arrays
+        int[] myIntArray = new int[10];
+        myIntArray[0] = 10;
+        myIntArray[1] = 20;
+        myIntArray[2] = 30;
+        System.out.println("===== Section 09 Start =====");
+        System.out.println(myIntArray[2]); // 30
+
+        // Array Initializer
+//        int[] myIntArray2 = new int[]{1, 2, 3, 4, 5}; // or just
+        // Shorten version
+        int[] myIntArray2 = {1, 2, 3, 4, 5};
+        System.out.println(myIntArray2[2]); // 3
+        System.out.println(myIntArray2[myIntArray2.length - 1]); // 5
+
+        // This won't work:
+//         int[] newArray; // 🚫
+//         newArray = {1, 2, 3, 4, 5}; // 🚫: Array initializer is not allowed here
+
+        for(int i = 0; i < myIntArray2.length; i++) {
+            System.out.print(myIntArray2[i] + " ");
+        };
     }
 
     public static String getInputFromConsole(int currentYear) {
