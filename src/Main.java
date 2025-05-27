@@ -481,8 +481,6 @@ public class Main {
 
         System.out.println("\nArray converted to the String: " + arrayToString);
 
-        // Array can be treated like any other object instance in Java!
-
         int[] firstArray = getRandomArray(4);
         System.out.println(Arrays.toString(firstArray));
 
@@ -496,6 +494,25 @@ public class Main {
         int[] largerArray = Arrays.copyOf(firstArray, 12);
         System.out.println(Arrays.toString(smallerArray));
         System.out.println(Arrays.toString(largerArray));
+
+        // Linear Search or Sequential search
+        // Interval Searching - binary search
+        String query = "Nemanja";
+        String[] namesArray = {"Jelena", "Anja", "Sasha", "Nemanja", "Irina"};
+        Arrays.sort(namesArray); // binarySearch only works with sorted arrays!
+        System.out.println(Arrays.toString(namesArray));
+        if(Arrays.binarySearch(namesArray, query) >= 0) {
+            System.out.println("Found " + query + " in the array!");
+        }
+
+        int[] s1 = {1 , 2, 3, 4, 5};
+        int[] s2 = {1 , 2, 3, 4, 5};
+
+        if(Arrays.equals(s1, s2)) {
+            System.out.println("Arrays are equal!");
+        } else {
+            System.out.println("Arrays are not equal!");
+        }
 
         System.out.println("===== Section 09 End =====");
     }
