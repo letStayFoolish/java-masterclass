@@ -6,6 +6,7 @@ import section08.PolymorphismChallenge.GasPoweredCar;
 import section08.PolymorphismChallenge.HybridCar;
 
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 // TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -482,6 +483,20 @@ public class Main {
 
         // Array can be treated like any other object instance in Java!
 
+        int[] firstArray = getRandomArray(4);
+        System.out.println(Arrays.toString(firstArray));
+
+        int[] secondArray = Arrays.copyOf(firstArray, firstArray.length);
+        System.out.println(Arrays.toString(secondArray));
+        Arrays.sort(secondArray);
+        System.out.println(Arrays.toString(firstArray));
+        System.out.println(Arrays.toString(secondArray));
+
+        int[] smallerArray = Arrays.copyOf(firstArray, 3);
+        int[] largerArray = Arrays.copyOf(firstArray, 12);
+        System.out.println(Arrays.toString(smallerArray));
+        System.out.println(Arrays.toString(largerArray));
+
         System.out.println("===== Section 09 End =====");
     }
 
@@ -551,4 +566,13 @@ public class Main {
         System.out.println("String builder = " + stringBuilder);
         System.out.println("Length of string builder = " + stringBuilder.length());
     }
+
+    private static int[] getRandomArray(int length) {
+        Random random = new Random();
+        int[] newArray = new int[length];
+        for (int i = 0; i < newArray.length; i++) {
+            newArray[i] = random.nextInt(100);
+        }
+        return newArray;
+    };
 }
