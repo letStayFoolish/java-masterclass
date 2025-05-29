@@ -8,8 +8,8 @@ public class ArrayChallenge {
         int[] unsortedArr = getRandomArrDescendingOrder(7);
         System.out.println("Before sorting: " + Arrays.toString(unsortedArr));
 
-        int[] sortedArr = Arrays.copyOf(unsortedArr, unsortedArr.length);
-        Arrays.sort(sortedArr);
+        int[] sortedArr = getArrSorted(unsortedArr);
+
         System.out.println("After sorting: " + Arrays.toString(sortedArr));
     }
 
@@ -25,9 +25,19 @@ public class ArrayChallenge {
         return arr;
     };
 
-    public static int[] sortArr(int[] arr) {
-        int[] sortedArr = Arrays.copyOf(arr, arr.length);
+    public static int[] getArrSorted(int[] arr) {
+        int[] arrCopy = Arrays.copyOf(arr, arr.length);
 
-        return sortedArr;
+        for(int i = 0; i < arrCopy.length; i++){
+            for(int j = i; j < arrCopy.length; j++){
+                if(arrCopy[i] < arrCopy[j]) {
+                    int temp = arrCopy[i];
+                    arrCopy[i] = arrCopy[j];
+                    arrCopy[j] = temp;
+                }
+            }
+        }
+
+        return arrCopy;
     }
 }
