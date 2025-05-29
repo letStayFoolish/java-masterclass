@@ -25,4 +25,22 @@ This method returns:
 - **The position of a match**, if found,
 - It returns **-1** when **no match** found,
 - Positive number **may not be the position of the first match**,
-- If array has duplicate values and we need to find first element, other method should be used.
+- If an array has duplicate values, and we need to find the first element, another method should be used.
+
+### Arrays Recap
+
+- An array is a data structure that allows us to store multiple values of the same type in a single variable.
+- The default values of a numeric array element are set to zero.
+- Arrays are zero-indexed. `const arr = [5, 7, 8];` That means that an element with value of 5 is at index 0, `arr[0]` is `5`.
+- If we try to access an index that is out of range, Java will give us an **ArrayIndexOutOfBoundsException**, which indicates that the index is out of range, in other words, out of bounds.
+- Array access operator `[]` e.g. `arr[0]`.
+
+```java
+import java.util.Arrays;
+
+int[] arr = new int[5]; // It has 5 elements and index range from 0 to 4;
+// or we can 
+String str = Arrays.toString(arr);
+
+// -> System.out.print(str); // [0, 0, 0, 0, 0];
+```
