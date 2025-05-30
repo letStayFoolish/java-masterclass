@@ -52,3 +52,17 @@ When you assign an object to a variable, **the variable becomes a reference** to
 This true of arrays, but the array has yet another level of indirection if it's an array of objects. This means every array element is also a reference.
 
 **It is always a good idea to pass a copy of array/object to a method (instead of original).** This is how we avoid it of mutating (transform) the original array/object.
+
+### Variable arguments (varargs)
+
+```java
+public static void main (String[] args) {};
+```
+
+This signature can be written in a slightly different way:
+
+```java
+public static void main (String...args) {};
+```
+
+Replacing brackets `[]` with `...` - Java will take 0, one or many `String` arguments to this method, and create an array.

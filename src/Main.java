@@ -521,7 +521,21 @@ public class Main {
         System.out.println("Original array: " + Arrays.toString(originalArr)); // [0, 0, 11, 0, 0]; both variables contain the addres pointing to the same array in memory.
         System.out.println("Copy of original array: " + Arrays.toString(copyArray)); // [0, 0, 11, 0, 0]; both variables contain the addres pointing to the same array in memory.
 
+        String[] splitString = "Hello, World again!".split(" ");
+
+        printText(splitString);
+        printText("Hello"); // Thanks to `...` we can pass many or event SINGLE string argument;
+
         System.out.println("===== Section 09 End =====");
+    }
+
+    public static void printText(String... textList) {
+
+        for (String text : textList) {
+            System.out.println(text);
+        }
+
+        System.out.println("-".repeat( 20));
     }
 
     public static String getInputFromConsole(int currentYear) {
