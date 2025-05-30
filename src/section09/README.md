@@ -44,3 +44,11 @@ String str = Arrays.toString(arr);
 
 // -> System.out.print(str); // [0, 0, 0, 0, 0];
 ```
+
+### Reference Types vs. Value Types
+
+When you assign an object to a variable, **the variable becomes a reference** to that object.
+
+This true of arrays, but the array has yet another level of indirection if it's an array of objects. This means every array element is also a reference.
+
+**It is always a good idea to pass a copy of array/object to a method (instead of original).** This is how we avoid it of mutating (transform) the original array/object.

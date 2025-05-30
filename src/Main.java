@@ -514,6 +514,13 @@ public class Main {
             System.out.println("Arrays are not equal!");
         }
 
+        int[] originalArr = new int[5];
+        int[] copyArray = originalArr;
+
+        copyArray[2] = 11;
+        System.out.println("Original array: " + Arrays.toString(originalArr)); // [0, 0, 11, 0, 0]; both variables contain the addres pointing to the same array in memory.
+        System.out.println("Copy of original array: " + Arrays.toString(copyArray)); // [0, 0, 11, 0, 0]; both variables contain the addres pointing to the same array in memory.
+
         System.out.println("===== Section 09 End =====");
     }
 
