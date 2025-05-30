@@ -81,3 +81,7 @@ int[][] arr = {
 
 Example of 3x3 matrix:
 `int[][] = new int[3][3]`
+
+### Multi-dimensional Arrays
+
+**An `Array` can be an array of primitive data elements, or array of any type in Java or simply an array of `Object` which is the most generic class you can declare anything to be.**
