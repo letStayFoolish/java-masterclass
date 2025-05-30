@@ -66,3 +66,18 @@ public static void main (String...args) {};
 ```
 
 Replacing brackets `[]` with `...` - Java will take 0, one or many `String` arguments to this method, and create an array.
+
+### Java's nested Array
+
+#### Two-Dimensional Array
+
+```java
+int[][] arr = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8},
+}; // new int[3][]; inner length is not defined, only outer
+```
+
+Example of 3x3 matrix:
+`int[][] = new int[3][3]`
